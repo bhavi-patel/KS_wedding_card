@@ -93,15 +93,3 @@ a { color: inherit; text-decoration: none; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
 }
-/* Background music toggle */
-.music-toggle { position: fixed; right: 20px; bottom: 20px; z-index: 100; width: 46px; height: 46px; border-radius: 50%; border: 1px solid var(--gold-light); background: var(--deep); color: var(--gold-light); display: grid; place-items: center; cursor: pointer; box-shadow: 0 6px 20px rgba(61, 17, 29, .3); transition: transform .2s, background .2s; }
-.music-toggle:hover { transform: translateY(-2px); background: var(--maroon); }
-.music-toggle.is-playing svg { animation: music-pulse 1.6s ease-in-out infinite; }
-@keyframes music-pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.15); } }
-@media (prefers-reduced-motion: reduce) { .music-toggle.is-playing svg { animation: none; } }
-
-/* Welcome screen (gives the browser the click it needs to start music) */
-.welcome-overlay { position: fixed; inset: 0; z-index: 200; display: grid; place-items: center; text-align: center; padding: 24px 16px; color: var(--cream); background: radial-gradient(ellipse at center, #873a42 0%, #641d2b 50%, #3d111d 100%); animation: welcome-in .6s ease-out; }
-.welcome-names { font-family: "Cormorant Garamond", serif; font-size: clamp(48px, 12vw, 90px); line-height: .95; font-weight: 500; margin: 18px 0 12px; }
-.welcome-date { font-family: "Cormorant Garamond", serif; font-size: 20px; color: var(--gold-light); margin: 0 0 30px; }
-@keyframes welcome-in { from { opacity: 0; } to { opacity: 1; } }
