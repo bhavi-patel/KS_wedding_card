@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { BackgroundMusic } from "@/components/background-music";
 
 export const metadata: Metadata = {
   title: "Kush & Shruti | Wedding Invitation",
@@ -11,7 +12,10 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        {children}
+        <BackgroundMusic />
+      </body>
     </html>
   );
 }
